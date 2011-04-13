@@ -1,1 +1,1 @@
-Spree::Config.set(:stylesheets => 'screen')
+Spree::Config.set(:stylesheets => 'jolly')
