@@ -1,0 +1,35 @@
+%h1
+  CONTACT US
+%hr.line
+
+.greenline-group
+  .green.one
+  .green.two
+  .green.three
+  
+.clear
+%div{:style => "float: left; width: 242px; margin-top: 335px;"}
+  = image_tag 'peppers.png'
+%div{:style => "width: 655px; float: left"}
+  #contact-us.tan-bg
+    = hook :contact do
+      = render "shared/error_messages", :target => @contact
+      = form_for @contact do |f|
+        %div{:style => "float: left; width: 300px;"}
+          %h3{:style => "font-size: 24px; margin-bottom: 15px;"}
+            Send us a message ;)
+          = f.hidden_field :topic_id, :value => "1" 
+          .field
+            = f.text_field :name, :value => "Your Name", :onclick => "this.value = ''", :style => "width: 238px; height: 48px;"
+          .field
+            = f.text_field :email, :value => "Your Email", :onclick => "this.value = ''", :style => "width: 238px; height: 48px;"
+        = image_tag 'india-stamp.jpg'
+        .field
+          = f.text_area :message, :value => "Your Message", :onclick => "this.value = ''", :style => "width: 398px; height: 181px; padding-top: 8px;"
+        = f.submit 'Send', :class => "send-button"
+  .clear
+  .greenline-group
+    .green.three
+    .green.two
+    .green.one
+%hr.line

@@ -1,0 +1,39 @@
+%h1
+  SERVICES
+%hr.line
+
+.mini-nav
+  = link_to 'Catering', '#', :class => "main-button", :rel => "catering"
+  = link_to 'Meal Plan', '#', :class => "main-button", :rel => "meal-plan"
+  = link_to 'Retail Locations', '#', :class => "main-button", :rel => "retail-locations"
+.greenline-group
+  .green.one
+  .green.two
+  .green.three
+  
+.clear
+%br/
+
+.catering.subcontent.tan-bg
+  %h3
+    Catering
+  = raw Wysiwyg.find_by_name("catering").content
+    
+.meal-plan.subcontent.tan-bg
+  %h3
+    Meal Plan
+  = raw Wysiwyg.find_by_name("meal-plan").content
+  
+.retail-locations.subcontent.tan-bg
+  %h3
+    Retail Locations
+  = raw Wysiwyg.find_by_name("retail-locations").content
+  
+.side-image
+  = image_tag 'nuts.png', :style => "position: absolute; bottom: 120px;"
+%br/
+.clear
+.greenline-group
+  .green.three
+  .green.two
+  .green.one

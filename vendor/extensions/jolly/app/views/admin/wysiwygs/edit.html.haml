@@ -1,0 +1,30 @@
+= javascript_include_tag :ckeditor
+#content.with-sidebar.clear
+  %br/
+  - if @wysiwyg.name == "homepage-blurp"
+    %h2 Homepage Blurp
+  - elsif @wysiwyg.name == "who-we-are"
+    %h2 Who We Are
+  - elsif @wysiwyg.name == "what-we-do"
+    %h2 What We Do
+  - elsif @wysiwyg.name == "rave-reviews"
+    %h2 Rave Reviews
+  - elsif @wysiwyg.name == "catering"
+    %h2 Catering
+  - if @wysiwyg.name == "meal-plan"
+    %h2 Meal Plan
+  - elsif @wysiwyg.name == "retail-locations"
+    %h2 Retail Locations
+  - elsif @wysiwyg.name == "raw-foods-explained"
+    %h2 Raw Foods Explained
+  - elsif @wysiwyg.name == "the-average-american"
+    %h2 The Average American
+  - elsif @wysiwyg.name == "videos"
+    %h2 Videos
+
+  %br/
+  - form_for @wysiwyg, :url => admin_wysiwyg_path do |f|
+    = f.hidden_field :name, :value => @wysiwyg.name
+    = f.cktext_area(:content, :width => '100%', :height => '200px')
+    = f.submit
+  = render :partial => 'sidenav'

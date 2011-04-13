@@ -1,0 +1,19 @@
+%h1
+  LIVE JOLLY FOODS
+%hr.line
+%div{:style => "float: left; width: 443px;"}
+  .home-left-text-container
+    = image_tag 'quote-left.jpg', :style => "float: left;"
+    = raw Wysiwyg.find_by_name("homepage-blurp").content
+    = image_tag 'quote-right.jpg', :style => "float: left; margin-top: 175px;"
+  .clear
+  = image_tag 'homepage-food-tray.jpg', :style => "left: -16px; position: relative; top: -18px;"
+.homepage-right-images
+  = image_tag 'foodie-1.jpg'
+  = image_tag 'foodie-2.jpg'
+  = image_tag 'foodie-3.jpg'
+  = image_tag 'foodie-4.jpg'
+  
+.greenline
+.greenline
+.greenline

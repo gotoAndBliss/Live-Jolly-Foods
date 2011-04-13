@@ -1,0 +1,39 @@
+%h1
+  SERVICES
+%hr.line
+
+.mini-nav
+  = link_to 'Raw Foods Explained', '#', :class => "main-button", :rel => "raw-foods-explained"
+  = link_to 'The Average American', '#', :class => "main-button", :rel => "the-average-american"
+  = link_to 'Videos', '#', :class => "main-button", :rel => "videos"
+.greenline-group
+  .green.one
+  .green.two
+  .green.three
+  
+.clear
+%br/
+
+.raw-foods-explained.subcontent.tan-bg
+  %h3
+    Raw Foods Explained
+  = raw Wysiwyg.find_by_name("raw-foods-explained").content
+  
+.the-average-american.subcontent.tan-bg
+  %h3
+    The Average American
+  = raw Wysiwyg.find_by_name("the-average-american").content
+  
+.videos.subcontent.tan-bg
+  %h3
+    Videos
+  = raw Wysiwyg.find_by_name("videos").content
+  
+.side-image
+  = image_tag 'apple.png', :style => "margin-top: 50px;"
+%br/
+.clear
+.greenline-group
+  .green.three
+  .green.two
+  .green.one

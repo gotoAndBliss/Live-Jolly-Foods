@@ -1,0 +1,38 @@
+!!!
+%html{:xmlns => "http://www.w3.org/1999/xhtml"}
+  %head
+    = hook :inside_head do
+      = render :partial => 'shared/head'
+  - if @body_class.nil?
+    - if content_for?(:sidebar)
+      - @body_class = 'two-col'
+    - else
+      - @body_class = 'one-col'
+  %body{:class => @body_class, :id => @body_id}
+    .main_container
+      #header.container_bg
+        .container
+          - # HIDE THIS UNTIL WE WANT A STORE
+          -#
+            #login-bar
+              %ul#nav-bar
+                = render 'shared/nav_bar'
+          .logo
+            = logo
+          #main-nav
+            = render 'shared/site_menu'
+      #wrapper.container
+        #content
+          - if content_for?(:sidebar)
+            #sidebar
+              = hook :sidebar do
+                = yield :sidebar
+          = breadcrumbs(@taxon) if @taxon
+          - if flash.notice
+            .flash.notice= flash.notice
+          - if flash[:error]
+            .flash.errors= flash[:error]
+          = yield
+        .bottom-leaf
+    .clear
+    = render :partial => 'shared/footer'
