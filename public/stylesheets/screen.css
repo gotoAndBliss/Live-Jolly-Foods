@@ -1032,8 +1032,7 @@ div#checkout #checkout-summary {
 }
 .home-left-text-container {
   background: none repeat scroll 0 0 #E9E9A1;
-  display: block;
-  height: 222px;
+  display: inline-table;
   padding: 16px 0 16px 11px;
   width: 430px;
   -moz-border-radius-topright: 25px;
