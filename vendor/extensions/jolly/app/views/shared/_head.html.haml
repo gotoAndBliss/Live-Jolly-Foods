@@ -2,6 +2,8 @@
 %meta{:content => "text/html;charset=utf-8", "http-equiv" => "Content-Type"}/
 = raw stylesheet_tags
 = csrf_meta_tag
+/[if IE 7]
+  = stylesheet_link_tag 'is-ie7.css'  
 = javascript_include_tag 'jquery-1.4.2.min.js', 'jquery.validate.min.js', 'rails', 'application', :cache => 'jquery-core'
 %link{:rel => "shortcut icon", :href => "/images/favicon.png"}
 - unless I18n.locale.to_s[0..1] == 'en'
