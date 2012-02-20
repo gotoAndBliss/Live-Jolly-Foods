@@ -8,6 +8,7 @@ Rails.application.routes.draw do
   match 'services/', :to => "pages#services"
   match 'raw_resources/', :to => "pages#raw_resources"
   match 'contact_us/', :to => "pages#contact_us"
+  match 'privacy_policy/', :to => "pages#privacy_policy"
   
   root :to => 'pages#index'
   

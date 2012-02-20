@@ -19,5 +19,8 @@ class PagesController < Spree::BaseController
   
   def contact_us
   end
+  
+  def privacy_policy
+  end
 
 end
