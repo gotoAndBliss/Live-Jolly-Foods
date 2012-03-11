@@ -22,5 +22,17 @@ class PagesController < Spree::BaseController
   
   def privacy_policy
   end
+  
+  def return_policy
+  end
+  
+  def refund_policy
+  end
+  
+  def cancellation_policy
+  end
+  
+  def delivery_shipping_policy
+  end
 
 end

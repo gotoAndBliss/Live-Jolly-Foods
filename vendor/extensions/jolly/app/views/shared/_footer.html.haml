@@ -19,9 +19,19 @@
           = link_to "blog", "http://thewizardofraw.blogspot.com/", :target => "_blank"
         %li
           = link_to "contact us", new_contact_path
+    #sub-info
+      %ul
         %li
           = link_to "privacy policy", '/privacy_policy'
+        %li
+          = link_to "return policy", '/return_policy'
+        %li
+          = link_to "refund policy", '/refund_policy'
+        %li
+          = link_to "cancellation policy", '/cancellation_policy'
+        %li
+          = link_to "delivery / shipping policy", '/delivery_shipping_policy'
       .clear
       %p
         \&copy; Copyright 2011 Live Jolly Foods | All Rights Reserved
-= render 'shared/google_analytics'
+  = render 'shared/google_analytics'
