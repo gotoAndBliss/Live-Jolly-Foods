@@ -27,6 +27,9 @@
             #sidebar
               = hook :sidebar do
                 = yield :sidebar
+              .clear
+              #search-bar
+                = render :partial => 'shared/search'
           = breadcrumbs(@taxon) if @taxon
           - if flash.notice
             .flash.notice= flash.notice

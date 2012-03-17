@@ -495,6 +495,10 @@ ul#site-menu{
 #site-menu li a.af{background: #31ced4;}
 #site-menu li a.ag{background: #f5ad21;}
 
+#search-bar select, input {
+  margin: 5px 0;
+}
+
 .breadcrumbs { margin-bottom: 1em; height: 25px; float: right;}
 .breadcrumbs ul {
   list-style-type: none;
