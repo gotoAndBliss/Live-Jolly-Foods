@@ -495,7 +495,7 @@ ul#site-menu{
 #site-menu li a.af{background: #31ced4;}
 #site-menu li a.ag{background: #f5ad21;}
 
-.breadcrumbs { margin-bottom: 1em; }
+.breadcrumbs { margin-bottom: 1em; height: 25px; float: right;}
 .breadcrumbs ul {
   list-style-type: none;
   margin: 0px;
