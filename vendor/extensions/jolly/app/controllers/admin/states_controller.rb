@@ -13,10 +13,6 @@ class Admin::StatesController < Admin::ResourceController
 
   protected
   
-  def load_country
-    @country = Country.first
-  end
-  
   def location_after_save
     admin_country_states_url(@country)
   end  
@@ -27,5 +23,6 @@ class Admin::StatesController < Admin::ResourceController
 
   def load_data
     @countries = Country.order(:name)
+    @country = Country.find(214)
   end
 end
