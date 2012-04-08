@@ -3,6 +3,7 @@ class Admin::StatesController < Admin::ResourceController
   #before_filter :load_data, :except => [:index]
 
   def index
+    debugger
     respond_to do |format|
       format.html
       format.js  { render :partial => 'state_list.html.erb' }
