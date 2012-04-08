@@ -25,6 +25,5 @@ class Admin::StatesController < Admin::ResourceController
 
   def load_data
     @countries = Country.order(:name)
-    @country = Country.find(214)
   end
 end
