@@ -14,7 +14,7 @@ class Admin::StatesController < Admin::ResourceController
   protected
   
   def load_country
-    @country = Country.find(214)
+    @country = Country.first
   end
   
   def location_after_save
