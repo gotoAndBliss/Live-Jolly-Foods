@@ -1,7 +1,7 @@
 source 'http://rubygems.org'
 
 gem 'rails', '3.0.5'
-gem 'spree', :git => 'http://github.com/spree/spree.git' 
+gem 'spree', '1.0.0' :git => 'http://github.com/spree/spree.git' 
 gem "jolly", :require => "jolly", :path => "vendor/extensions/jolly"
 gem 'ruby-debug'
 gem 'haml'
