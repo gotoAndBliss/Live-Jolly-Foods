@@ -1,10 +1,12 @@
 class Admin::StatesController < Admin::ResourceController
   # belongs_to :country
-  before_filter :load_country
-  #before_filter :load_data, :except => [:index]
+  #before_filter :load_country
+  before_filter :load_data, :except => [:index]
 
   def index
     #debugger
+    @country = Country.find(214)
+    
     respond_to do |format|
       format.html
       format.js  { render :partial => 'state_list.haml' }
