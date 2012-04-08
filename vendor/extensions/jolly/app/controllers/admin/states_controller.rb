@@ -5,7 +5,7 @@ class Admin::StatesController < Admin::ResourceController
 
   def index
     #debugger
-    @country = Country.find(214)
+    #@country = Country.find(214)
     
     respond_to do |format|
       format.html

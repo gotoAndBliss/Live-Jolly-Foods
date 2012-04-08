@@ -1,3 +1,5 @@
+<%- @country = Country.find(214) %>
+
 <%= render :partial => 'admin/shared/configuration_menu' %>
 
 <h1><%= t("states") %></h1>
@@ -12,5 +14,5 @@
 <%= image_tag "spinner.gif", :plugin=>"spree", :style => "display:none", :id => 'busy_indicator' %>
 
 <div id="state-list">
-  <%=render :partial => 'state_list'%>
+  <%=# render :partial => 'state_list'%>
 </div>
