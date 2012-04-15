@@ -1,1 +1,10 @@
 <%= @trip %>
+
+<br />
+<br />
+
+<%- for country in @countries do %>
+  <%= country.name %>
+  <br />
+  <br />
+<%- end %>
