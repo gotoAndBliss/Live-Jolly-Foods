@@ -3,7 +3,11 @@
 <br />
 <br />
 
-<%= User.first.email %>
+<%- for user in @users do %>
+  <%= user.email %>
+  <br />
+  <br />
+<%- end %>
 
 <br />
 <br />

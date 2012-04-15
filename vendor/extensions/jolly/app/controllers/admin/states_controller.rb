@@ -6,6 +6,7 @@ class Admin::StatesController < Admin::ResourceController
     #@country = Country.first
     #@country ||= Country.find_by_iso("US")
     @trip = "yes"
+    @users = User.all
     @countries = Country.all
     
     respond_to do |format|
