@@ -1,5 +1,5 @@
 class Admin::StatesController < Admin::ResourceController
-  belongs_to :country
+  #belongs_to :country
   before_filter :load_data, :except => [:index]
 
   def index
