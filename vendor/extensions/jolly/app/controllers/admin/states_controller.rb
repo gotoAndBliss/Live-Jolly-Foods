@@ -1,4 +1,5 @@
-class Admin::StatesController < Admin::ResourceController
+class Admin::StatesController < Admin::BaseController
+  #class Admin::StatesController < Admin::ResourceController
   belongs_to :country
   before_filter :load_data, :except => [:index]
 
