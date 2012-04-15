@@ -1,10 +1,11 @@
 class Admin::StatesController < Admin::ResourceController
-  #belongs_to :country
+  belongs_to :country
   before_filter :load_data, :except => [:index]
 
   def index
     #@country = Country.first
-    @country ||= Country.find_by_iso("US")
+    #@country ||= Country.find_by_iso("US")
+    @trip = "yes"
     
     respond_to do |format|
       format.html
